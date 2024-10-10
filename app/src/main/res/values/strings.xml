@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">hw1</string>
+    <string name="button">Button</string>
+    <string name="Button1">Button</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+</resources>

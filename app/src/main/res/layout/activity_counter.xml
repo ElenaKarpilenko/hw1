@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CounterActivity">
+
+    <!-- Изображение товара -->
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/sample_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Название товара -->
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Product Title"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/product_image"
+        app:layout_constraintTop_toTopOf="@id/product_image" />
+
+    <!-- Цена товара -->
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="120 com"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/product_image"
+        app:layout_constraintTop_toBottomOf="@id/product_title" />
+
+    <!-- Текстовый результат (счетчик) -->
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:textColor="@color/black"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_image" />
+
+    <!-- Кнопка увеличения -->
+    <Button
+        android:id="@+id/btn_increment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/btn_decrement"
+        app:layout_constraintTop_toBottomOf="@id/tv_result"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Кнопка уменьшения -->
+    <Button
+        android:id="@+id/btn_decrement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minus"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/btn_increment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_result" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
